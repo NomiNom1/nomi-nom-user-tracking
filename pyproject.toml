@@ -1,0 +1,6 @@
+[project]
+name = "nomi-nom-user-tracking"
+version = "0.1.0"
+description = "A FastAPI service for user tracking analytics"
+readme = "README.md"
+requires-python = ">=3.11"

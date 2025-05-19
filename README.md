@@ -11,3 +11,36 @@ Consider Redshift (Optional): For more complex analytics, interact with Redshift
 Consider TimescaleDB (Optional): For real-time dashboards, you can use Python libraries to interact with it.
 
 Leveraging Python within the AWS ecosystem (FastAPI for the API, PySpark in Glue for ETL, and boto3 for interacting with various AWS services), we build a highly scalable and powerful analytics platform for our application. Using containerization (Docker) and managed AWS services (ECS/EKS, Glue, Athena, QuickSight) to achieve massive scalability and reduce operational overhead.
+
+# Nomi Nom User Tracking
+
+A FastAPI service for user tracking analytics.
+
+## Local Development
+
+1. Install dependencies using uv:
+```bash
+uv pip install .
+```
+
+2. Run the application:
+```bash
+uvicorn app.main:app --reload
+```
+
+The API will be available at http://localhost:8000
+
+## API Documentation
+
+Once the server is running, you can access:
+- Swagger UI: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
+
+## Docker
+
+To run using Docker:
+
+```bash
+docker build -t nomi-nom-tracking .
+docker run -p 8000:8000 nomi-nom-tracking
+```
